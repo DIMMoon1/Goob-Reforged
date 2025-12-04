@@ -1385,7 +1385,6 @@ entities:
     - type: Godmode
     - type: BatterySelfRecharger
       autoRechargeRate: 50000
-      autoRecharge: True
     - type: Fixtures
       fixtures: {}
     missingComponents:
@@ -1402,7 +1401,6 @@ entities:
     - type: Godmode
     - type: BatterySelfRecharger
       autoRechargeRate: 50000
-      autoRecharge: True
     - type: Fixtures
       fixtures: {}
     missingComponents:
@@ -1419,7 +1417,6 @@ entities:
     - type: Godmode
     - type: BatterySelfRecharger
       autoRechargeRate: 50000
-      autoRecharge: True
     - type: Fixtures
       fixtures: {}
     missingComponents:
@@ -1436,7 +1433,6 @@ entities:
     - type: Godmode
     - type: BatterySelfRecharger
       autoRechargeRate: 50000
-      autoRecharge: True
     - type: Fixtures
       fixtures: {}
     missingComponents:
@@ -1454,7 +1450,6 @@ entities:
     - type: Godmode
     - type: BatterySelfRecharger
       autoRechargeRate: 50000
-      autoRecharge: True
     - type: Fixtures
       fixtures: {}
     missingComponents:
@@ -1471,7 +1466,6 @@ entities:
     - type: Godmode
     - type: BatterySelfRecharger
       autoRechargeRate: 50000
-      autoRecharge: True
     - type: Fixtures
       fixtures: {}
     missingComponents:

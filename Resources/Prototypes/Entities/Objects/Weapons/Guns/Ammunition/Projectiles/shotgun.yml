@@ -26,7 +26,9 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: buckshot
+    layers:
+    - state: bullet #just reapplying to here so it can be shaded
+
   - type: Projectile
     damage:
       types:
@@ -40,9 +42,6 @@
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: buckshot
   - type: Projectile
     damage:
       types:
@@ -66,9 +65,6 @@
   categories: [ HideSpawnMenu ]
   parent: BaseBulletIncendiary
   components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: buckshot-flare
   - type: Projectile
     damage:
       types:
@@ -93,9 +89,6 @@
   categories: [ HideSpawnMenu ]
   parent: BaseBulletPractice
   components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: buckshot
   - type: Projectile
     damage:
       types:
@@ -119,7 +112,9 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: shard
+    layers:
+    - state: shard
+      shader: unshaded
   - type: Projectile
     damage:
       types:
@@ -142,9 +137,6 @@
   categories: [ HideSpawnMenu ]
   parent: BaseBulletPractice
   components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: buckshot
   - type: Projectile
     damage:
       types:
@@ -208,13 +200,8 @@
   id: PelletShotgunUranium
   name: pellet (.50 uranium)
   categories: [ HideSpawnMenu ]
-  parent: BaseBullet
+  parent: BaseBulletUranium
   components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    layers:
-    - state: uranium
-      shader: unshaded
   - type: Projectile
     damage:
       types:
@@ -270,7 +257,6 @@
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
     - state: shard
-      shader: unshaded
   - type: EmbeddableProjectile
     deleteOnRemove: true
   - type: Projectile

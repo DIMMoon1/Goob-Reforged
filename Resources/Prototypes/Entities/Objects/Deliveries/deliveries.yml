@@ -106,6 +106,9 @@
     containers:
       delivery: !type:NestedSelector
         tableId: PackageDeliveryRewards
+  - type: Tag
+    tags:
+      - PackageDelivery
 
 - type: entity
   parent: BaseDelivery

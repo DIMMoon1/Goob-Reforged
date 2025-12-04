@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: MIT-WIZARDS
 
+# When adding new plushies, also add them to id: AllPlushiesTable
+
 ## Plushies
 
 - type: entity

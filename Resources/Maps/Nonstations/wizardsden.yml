@@ -508,7 +508,6 @@ entities:
       parent: 1
     - type: BatterySelfRecharger
       autoRechargeRate: 200000
-      autoRecharge: True
 - proto: BarberScissors
   entities:
   - uid: 649

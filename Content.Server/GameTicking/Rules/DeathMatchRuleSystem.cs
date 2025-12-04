@@ -133,5 +133,6 @@ public sealed class DeathMatchRuleSystem : GameRuleSystem<DeathMatchRuleComponen
         }
         args.AddLine(Loc.GetString("point-scoreboard-header"));
         args.AddLine(new FormattedMessage(point.Scoreboard).ToMarkup());
+        args.AddLine("");
     }
 }
