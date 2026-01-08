@@ -25,7 +25,7 @@ namespace Content.Goobstation.Server.Database.Migrations.Postgres
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Content.Goobstation.Server.Database.BrainrotWord", b =>
+            modelBuilder.Entity("Content.Goobstation.Server.Database.NetspeakWord", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -43,7 +43,7 @@ namespace Content.Goobstation.Server.Database.Migrations.Postgres
 
                     b.HasKey("Id");
 
-                    b.ToTable("brainrot_words");
+                    b.ToTable("netspeak_words");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,7 +9,7 @@ namespace Content.Goobstation.Server.Database;
 
 public abstract class GoobstationServerDbContext : DbContext
 {
-    public DbSet<BrainrotWord> BrainrotWords { get; set; } = null!;
+    public DbSet<NetspeakWord> NetspeakWords { get; set; } = null!;
 
     protected GoobstationServerDbContext(DbContextOptions options) : base(options)
     {

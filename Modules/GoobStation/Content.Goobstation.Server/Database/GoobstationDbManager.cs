@@ -19,9 +19,9 @@ public interface IGoobstationDbManager
 {
     void Init();
     void Shutdown();
-    Task<List<BrainrotWord>> GetBrainrotWordsAsync();
-    Task AddBrainrotWordAsync(string keyword, string username);
-    Task RemoveBrainrotWordAsync(string keyword);
+    Task<List<NetspeakWord>> GetNetspeakWordsAsync();
+    Task AddNetspeakWordAsync(string keyword, string username);
+    Task RemoveNetspeakWordAsync(string keyword);
 }
 
 public sealed class GoobstationDbManager : IGoobstationDbManager
@@ -90,21 +90,21 @@ public sealed class GoobstationDbManager : IGoobstationDbManager
     , false => new GoobstationSqliteServerDbContext((DbContextOptions<GoobstationSqliteServerDbContext>)_options!)
     };
 
-    public async Task<List<BrainrotWord>> GetBrainrotWordsAsync()
+    public async Task<List<NetspeakWord>> GetNetspeakWordsAsync()
     { await using var ctx = CreateContext();
-      return await ctx.BrainrotWords.ToListAsync();
+      return await ctx.NetspeakWords.ToListAsync();
     }
 
-    public async Task AddBrainrotWordAsync(string keyword, string username)
+    public async Task AddNetspeakWordAsync(string keyword, string username)
     { await using var ctx = CreateContext();
-      ctx.BrainrotWords.Add(new BrainrotWord { Keyword = keyword, Username = username });
+      ctx.NetspeakWords.Add(new NetspeakWord { Keyword = keyword, Username = username });
       await ctx.SaveChangesAsync();
     }
 
-    public async Task RemoveBrainrotWordAsync(string keyword)
+    public async Task RemoveNetspeakWordAsync(string keyword)
     { await using var ctx = CreateContext();
-      if (await ctx.BrainrotWords.FirstOrDefaultAsync(w => w.Keyword == keyword) is { } word)
-      { ctx.BrainrotWords.Remove(word);
+      if (await ctx.NetspeakWords.FirstOrDefaultAsync(w => w.Keyword == keyword) is { } word)
+      { ctx.NetspeakWords.Remove(word);
         await ctx.SaveChangesAsync();
       }
     }

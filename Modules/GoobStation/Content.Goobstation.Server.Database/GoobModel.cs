@@ -7,8 +7,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Content.Goobstation.Server.Database;
 
-[Table("brainrot_words")]
-public class BrainrotWord
+[Table("netspeak_words")]
+public class NetspeakWord
 {
     [Key]
     public int Id { get; set; }
